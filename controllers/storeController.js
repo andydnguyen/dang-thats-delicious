@@ -19,7 +19,7 @@ exports.createStore= async (req, res) => {
 exports.getStores = async (req, res) => {
   // 1. Query the database for a list of all stores
   const stores = await Store.find();
-  console.log(stores);
+  // console.log(stores);
   res.render('stores', { title: 'Stores', stores });
 };
 
@@ -33,6 +33,8 @@ exports.editStore = async (req, res) => {
 };
 
 exports.updateStore = async (req,res) => {
+  //set the location data to be a point
+  req.body.location.type = 'Point';
   // find and update the store
   const store = await Store.findOneAndUpdate({ _id: req.params.id}, req.body, {
     new: true, // return the new store instead of the old one
