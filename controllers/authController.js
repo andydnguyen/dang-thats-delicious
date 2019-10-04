@@ -12,3 +12,4 @@ exports.logout = (req, res) => {
   req.flash('success', 'You are now logged out! 👋');
   res.redirect('/');
 };
+
