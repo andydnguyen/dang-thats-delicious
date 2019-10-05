@@ -13,3 +13,12 @@ exports.logout = (req, res) => {
   res.redirect('/');
 };
 
+exports.isLoggedIn = (req, res, next) => {
+  // first check if the user is autheticated
+  if (req.isAuthenticated()) {
+    next(); //carry on! They are logged in!
+    return;
+  }
+  req.flash('error', 'Oops you must be logged in to do that!');
+  res.redirect('/login');
+};
