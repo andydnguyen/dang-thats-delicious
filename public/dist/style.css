@@ -696,7 +696,7 @@ label {
     .nav__link--logo svg {
       width: 100%; }
   .heart-count:before {
-    content: '\2665\FE0F';
+    content: '♥️';
     margin-right: 1rem; } }
 
 .table {
@@ -910,7 +910,7 @@ label {
   outline: 0;
   position: relative; }
   .heart__button:after {
-    content: '\2665\FE0F';
+    content: '♥️';
     font-size: 20px;
     position: absolute;
     opacity: 0;
@@ -1017,7 +1017,7 @@ label {
            This is fine for accessibility because our labels have for()
          */ }
         .reviewer__stars input + label:before {
-          content: '\2605';
+          content: '★';
           font-size: 2rem; }
         .reviewer__stars input + label[for="star5"] {
           -ms-flex-order: 5;
@@ -1069,14 +1069,14 @@ label {
     padding: 1rem 3rem 1rem 1rem; }
     .pagination__next a:after {
       margin-left: 1rem;
-      content: '\2192'; }
+      content: '→'; }
   .pagination__prev {
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     padding: 1rem 1rem 1rem 3rem; }
     .pagination__prev a:before {
       margin-right: 1rem;
-      content: '\2190'; }
+      content: '←'; }
   .pagination__text {
     -ms-flex: 3 0 auto;
         flex: 3 0 auto;
