@@ -18,7 +18,7 @@ const multerOptions = {
 };
 
 exports.homePage = (req, res) => {
-  console.log(req.name);
+  // console.log(req.name);
   res.render('index');
 };
 
@@ -93,7 +93,7 @@ exports.updateStore = async (req, res) => {
 
 exports.getStoreBySlug = async (req, res, next) => {
   const store = await Store.findOne({ slug: req.params.slug }).populate(
-    'author'
+    'author reviews'
   );
   if (!store) return next();
   res.render('store', { store, title: store.name });
